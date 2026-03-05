@@ -1,0 +1,42 @@
+# 平台配置
+
+# 飞书Webhook
+feishu:
+  webhook_url: "https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+# 监测平台
+platforms:
+  # 评价平台
+  - name: dianping
+    shop_id: "你的店铺ID"
+    enabled: true
+    
+  - name: douyin
+    shop_id: "你的店铺ID"
+    enabled: true
+    
+  - name: amap
+    shop_id: "你的店铺ID"
+    enabled: true
+
+  # 外卖平台
+  - name: meituan
+    shop_id: "你的店铺ID"
+    enabled: true
+    
+  - name: ele
+    shop_id: "你的店铺ID"
+    enabled: true
+
+# 更新频率配置
+schedule:
+  # 评价平台: 10:00-20:00，每2小时
+  review:
+    enabled: true
+    hours: [10, 12, 14, 16, 18, 20]
+    
+  # 外卖平台: 午餐10:30-12:30，晚餐17:00-19:00，每30分钟
+  food:
+    enabled: true
+    lunch_hours: [10, 11, 12]
+    dinner_hours: [17, 18, 19]
